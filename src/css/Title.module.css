@@ -4,17 +4,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    
+    height: 10vh;
 }
 
 .logo {
     width: 64px;
     height: 64px;
-    display: flex;
+
     margin-right: 1vw;
 }
 
 .title {
-    display: flex;
 
 }

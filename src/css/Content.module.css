@@ -1,8 +1,10 @@
 .container {
-    background-color: red;
+    background-color: lightcoral;
     width: 100vw;
     margin: auto;
+    text-align: center;
     display: flex;
-    justify-content:center;
-    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
 }

@@ -1,7 +1,11 @@
+import styles from '../css/Top.module.css'
+
 const Top = ({children}) => {
     return (
         <>
-            {children}
+            <div className={styles.container}>
+                {children}
+            </div>
         </>
     )
 }
