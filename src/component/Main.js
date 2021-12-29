@@ -1,6 +1,6 @@
 import styles from '../css/Content.module.css'
 
-const Content = ({children}) => {
+const Main = ({children}) => {
     return (
         <><div className={styles.container}>
             {children}
@@ -9,4 +9,4 @@ const Content = ({children}) => {
     )
 }
 
-export default Content;
+export default Main;

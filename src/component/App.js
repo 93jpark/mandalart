@@ -1,5 +1,5 @@
 import Top from './Top'
-import Content from './Content'
+import Main from './Main'
 import Title from './Title'
 import Navbar from './Navbar'
 import Article from './Article'
@@ -16,11 +16,11 @@ function App() {
         <Navbar></Navbar>
       </Top>
       
-      <Content>
+      <Main>
         <SideLeft></SideLeft>
         <Article></Article>
         <SideRight></SideRight>
-      </Content>
+      </Main>
         
       <Footer>
 
