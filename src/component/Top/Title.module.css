@@ -2,18 +2,21 @@
     background: pink;
     text-align: center;
     display: flex;
-    align-items: center;
+    height: 110px;
+    width: 100%;
+    flex: 1;
     justify-content: center;
-    height: 10vh;
+    align-items: center;
+    margin: auto 0;
 }
 
 .logo {
     width: 64px;
     height: 64px;
-
-    margin-right: 1vw;
+    margin-right: 1.5vw;
 }
 
 .title {
-
+    font-size: 45px;
+    font-weight: 600;
 }

@@ -1,4 +1,4 @@
-import styles from '../css/SideLeft.module.css'
+import styles from './SideLeft.module.css'
 
 const SideLeft = () => {
     return (

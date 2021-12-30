@@ -1,0 +1,29 @@
+.navItems {
+    background-color: lightsalmon;    
+    display: flex;
+    margin: auto;
+    height: 25px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+
+.menuIcon {
+    margin-top: 0.5vh;
+    margin-right: 10px;
+}
+
+.menuItem {
+    padding: auto;
+    margin: 10vw;
+    font-size: 20px;
+}
+
+.menuItem:hover {
+
+}
+
+.menuItem:hover span {
+    color:  whitesmoke;
+}

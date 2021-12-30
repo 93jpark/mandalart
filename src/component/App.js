@@ -1,11 +1,11 @@
-import Top from './Top'
-import Main from './Main'
-import Title from './Title'
-import Navbar from './Navbar'
-import Article from './Article'
-import SideLeft from './SideLeft'
-import SideRight from './SideRight'
-import Footer from './Footer'
+import Top from './Top/Top'
+import Main from './Main/Main'
+import Title from './Top/Title'
+import Navbar from './Top/Navbar'
+import Article from './Main/Article'
+import SideLeft from './Side/SideLeft'
+import SideRight from './Side/SideRight'
+import Footer from './Footer/Footer'
 
 
 function App() {

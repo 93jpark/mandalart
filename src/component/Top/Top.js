@@ -1,4 +1,4 @@
-import styles from '../css/Top.module.css'
+import styles from './Top.module.css'
 
 const Top = ({children}) => {
     return (

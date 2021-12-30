@@ -1,0 +1,19 @@
+.Box {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: rosybrown;
+    margin: 2px;
+    line-height: 50px;
+}
+
+.Box:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+
+.Content {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
