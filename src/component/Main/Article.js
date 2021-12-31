@@ -10,8 +10,21 @@ const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
 
 const Article = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false);
-    const [datas, setDatas] = useState(data);
+    const [data, setData] = useState(data);
+
     
+    const [NW, setData] = useState(data.NW);
+    const [N, setData] = useState(data.N);
+    const [NE, setData] = useState(data.NE);
+    const [Main, setData] = useState(data.Main);
+    const [E, setData] = useState(data.E);
+    const [SW, setData] = useState(data.SW);
+    const [S, setData] = useState(data.S);
+    const [SE, setData] = useState(data.SE);
+    
+
+    
+
     
 
     
@@ -19,6 +32,18 @@ const Article = () => {
         alert(`It is ${area} area`);
         setModalIsOpen(true);
         
+    }
+
+    const setContent = (major, content, newContent) => {
+        alert(`major:${major}, content:${content}, newCont:${newContent}`)
+
+        let newData = {
+            ...data,
+            
+        };
+        setData(newData);
+        console.log(newData);
+        console.log(data);
     }
     
     return (
@@ -35,11 +60,11 @@ const Article = () => {
                             
                             {/* below is for subArea */}
                             {posArr.map((pos,i) => {
-                                const main = idx === 4 ? "Main" : "sub"+position;
-                                const content = i === 4 ? "Main" : pos;
+                                const major = idx === 4 ? "Main" : "sub"+position;
+                                const subject = i === 4 ? "Main" : pos;
 
                                 return (
-                                    <Box key={position+idx+pos+i} main={main} content={datas[main][content]}></Box>
+                                    <Box key={position+idx+pos+i} setContent={setContent} major={major} subject={subject} content={[major][subject]}></Box>
                                 )
                             })}
                         </BoxContainer>

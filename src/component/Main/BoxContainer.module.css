@@ -1,9 +1,10 @@
 .container {
-    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    background-color: lightgray;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 1px;
-    grid-row-gap: 1px;   
+    
 }
 
 
