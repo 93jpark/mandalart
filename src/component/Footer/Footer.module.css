@@ -1,11 +1,8 @@
 .container {
     width: 100vw;
     display: flex;
-    position: fixed;
-    top: 100;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    height: 30px;
     justify-content: center;
     background-color: linen;
+    font-size: small;
 }

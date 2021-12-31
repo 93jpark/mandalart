@@ -2,6 +2,7 @@
     display: inline-block;
     background-color: orange;
     width: 10vw;
-    height: 70vh;
+    height: 55vh;
+    min-height: 450px;
     margin: 0 3vw;
 }

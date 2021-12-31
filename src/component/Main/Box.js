@@ -1,12 +1,12 @@
 import styles from './Box.module.css'
 
 
-const Box = ( { key, index, onClickPop } ) => {
+const Box = ( { main, content } ) => {
 
 
 
     const getContent = () => {
-        if(index === 'Main') {
+        if(content === 'Main') {
 
         } else {
             //onClickPop(index)
@@ -16,7 +16,7 @@ const Box = ( { key, index, onClickPop } ) => {
     
     return (
         <div onClick={getContent} className={styles.Box}>
-            <span className={styles.Content}>{index}</span>
+            <span className={styles.Content}>{content}</span>
         </div>
     )
 }

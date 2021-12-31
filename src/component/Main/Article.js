@@ -2,32 +2,48 @@ import styles from './Article.module.css'
 import Box from './Box'
 //import ArticleTop from './ArticleTop';
 import BoxContainer from './BoxContainer';
+import Modal from 'react-modal';
+import { useState } from 'react';
+import data from '../../data/dataTemplate.json'
 
-const arr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
+const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
 
 const Article = () => {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+    const [datas, setDatas] = useState(data);
     
-    const onClickPop = (text) => {
-        alert(text);
-    }
+    
 
-    const clickedContainer = (i) => {
-        alert(i);
+    
+    const clickedContainer = (area) => {
+        alert(`It is ${area} area`);
+        setModalIsOpen(true);
+        
     }
-
+    
     return (
         <>  
             <div className={styles.mandalart}>
+                <Modal isOpen={false}>
+                    This is Modal Content.
+                </Modal>
 
-                {arr.map((v,i) => {
+                {/* core area */}
+                {posArr.map((position, idx) => {
                     return (
-                        <BoxContainer className={styles.BoxContainer} clicked={clickedContainer} key={v+i} boxId={v}>
-                            {arr.map((v,i) => {
+                        <BoxContainer key={"area"+position+idx} className={styles.BoxContainer} clicked={clickedContainer}  boxId={position}>
+                            
+                            {/* below is for subArea */}
+                            {posArr.map((pos,i) => {
+                                const main = idx === 4 ? "Main" : "sub"+position;
+                                const content = i === 4 ? "Main" : pos;
+
                                 return (
-                                    <Box onClickPop={onClickPop} key={v+i} index={v}></Box>
+                                    <Box key={position+idx+pos+i} main={main} content={datas[main][content]}></Box>
                                 )
                             })}
                         </BoxContainer>
+
                     )
                 })}
 

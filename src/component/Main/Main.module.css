@@ -1,7 +1,6 @@
 .container {
     display: flex;
-    flex: 1;
-    margin-top: 50px;
+    margin-top: 145px;
     
     background-color: lightcoral;
     width: 100vw;
@@ -10,5 +9,5 @@
     
     align-items: center;
     justify-content: center;
-    height: 750px;
+
 }

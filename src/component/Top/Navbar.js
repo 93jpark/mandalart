@@ -1,5 +1,4 @@
 import styles from "./Navbar.module.css"
-import FaGithub from "react-icons/go";
 import { AiFillInfoCircle } from "react-icons/ai";
 import { GoMarkGithub } from "react-icons/go";
 import { CgWebsite } from "react-icons/cg"
@@ -7,10 +6,7 @@ import { CgWebsite } from "react-icons/cg"
 const Navbar = () => {
     return (
         <>  
-            
             <div className={styles.navItems}>
-
-
                 <div className={styles.menuItem}>
                     <AiFillInfoCircle className={styles.menuIcon} />
                     <span>How To Use?</span>

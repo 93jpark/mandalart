@@ -7,7 +7,6 @@ import SideLeft from './Side/SideLeft'
 import SideRight from './Side/SideRight'
 import Footer from './Footer/Footer'
 
-
 function App() {
   return (
     <>
