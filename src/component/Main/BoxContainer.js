@@ -1,12 +1,29 @@
+
+import Box from './Box'
 import styles from './BoxContainer.module.css';
 
-const BoxContainer = ( {children, boxId, clicked} ) => {
+const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
+
+const BoxContainer = ( { boxId, clickedContainer, dataset } ) => {
     const getBoxId = () => {
-        clicked(boxId);
+        clickedContainer(boxId);
     }
+
+    const setContent = () => {
+
+    }
+
+    //console.log(dataset);
+// const Box = ( { major, subject, content, setContent } ) => {
+
+
     return (
         <div onClick={getBoxId} className={styles.container}>
-            {children}
+            {posArr.map((pos, i) => {
+                return (
+                    <Box key={pos+i} subject={boxId} content={dataset[pos]}   />
+                )
+            })}
         </div>
     )
 }

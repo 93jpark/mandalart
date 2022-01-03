@@ -1,7 +1,7 @@
 import styles from './Box.module.css'
 
 
-const Box = ( { major, subject, content, setContent } ) => {
+const Box = ( { subject, content, setContent } ) => {
 
 
 
@@ -15,9 +15,7 @@ const Box = ( { major, subject, content, setContent } ) => {
     }
 
     const setNewContent = () => {
-        alert("set new content")
-        console.log(`box pos is ${subject}`)
-        setContent(major, subject, "new")
+        //alert("clicked")
     }
     
     return (

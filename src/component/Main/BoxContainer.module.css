@@ -1,6 +1,8 @@
 .container {
     margin: 5px;
     padding: 5px;
+    min-width: 150px;
+    min-height: 150px;
     background-color: lightgray;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -9,5 +11,5 @@
 
 
 .container:hover {
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.3);
 }
