@@ -1,15 +1,12 @@
 .container {
-    display: flex;
-    background-color: paleturquoise;
-    width: 50vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
 .mandalart {
+    height: 50%;
     margin: 50px;
-    background-color: white;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);

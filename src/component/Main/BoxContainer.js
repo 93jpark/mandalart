@@ -19,12 +19,13 @@ const BoxContainer = ( { boxId, clickedContainer, dataset } ) => {
 
     return (
         <div onClick={getBoxId} className={styles.container}>
-            {posArr.map((pos, i) => {
+            {/* {posArr.map((pos, i) => {
                 return (
                     <Box key={pos+i} subject={boxId} content={dataset[pos]}   />
                 )
-            })}
+            })} */}
         </div>
+        
     )
 }
 

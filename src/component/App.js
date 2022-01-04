@@ -6,6 +6,7 @@ import Article from './Main/Article'
 import SideLeft from './Side/SideLeft'
 import SideRight from './Side/SideRight'
 import Footer from './Footer/Footer'
+import styles from './App.module.css'
 
 function App() {
   return (
@@ -24,7 +25,6 @@ function App() {
       <Footer>
 
       </Footer>
-      
 
     </>
   );

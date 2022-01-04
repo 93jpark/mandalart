@@ -1,8 +1,11 @@
 .container {
-    width: 100vw;
     display: flex;
-    height: 30px;
+    
+    align-content: center;
     justify-content: center;
-    background-color: linen;
+    background-color: skyblue;
     font-size: small;
+    margin-top: 13vh;
+    width: 100vw;
+    height: 7vh;
 }

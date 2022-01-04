@@ -40,7 +40,7 @@ const Article = () => {
     return (
         <>  
             { isModalOpen ? <Modal switchModalStatus={switchModalStatus} focusPos={focusPos}></Modal> : null }
-
+        <div className={styles.container}>
             <div className={styles.mandalart}>
 
                 {/* core area */}
@@ -51,6 +51,7 @@ const Article = () => {
                     )
                 })}
 
+            </div>
             </div>
         </>
     )

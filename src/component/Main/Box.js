@@ -1,7 +1,7 @@
 import styles from './Box.module.css'
 
 
-const Box = ( { subject, content, setContent } ) => {
+const Box = ( { subject, content, setContent, switchInputModalStatus } ) => {
 
 
 
@@ -16,6 +16,7 @@ const Box = ( { subject, content, setContent } ) => {
 
     const setNewContent = () => {
         //alert("clicked")
+        switchInputModalStatus();
     }
     
     return (

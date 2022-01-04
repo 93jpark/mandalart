@@ -1,0 +1,52 @@
+
+/* wrapper for Modal background */
+.wrapper {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0,0,0,0.4);
+    width: 100vw;
+    height: 100vh;
+
+}
+
+.inputArea {
+    display: flex;
+    background-color:navajowhite;
+    width: 80%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 0 0 30px 30px;
+    background-color: beige;
+    margin-left: 15vw;
+    margin-top: 20vh;
+    min-width: 300px;
+    min-height: 240px;
+    width: 30%;
+    height: 50%;
+}
+
+.statusBar {
+    display: flex;
+    justify-content: flex-end;
+
+    align-items: center;
+    background-color: lightsteelblue;
+    height: 35px;
+    width: 100%;
+}
+
+.closeBtn {
+    width: 30px;
+    height: 25px;
+    margin: 0 10px;
+}

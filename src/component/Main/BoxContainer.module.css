@@ -1,12 +1,10 @@
+
 .container {
-    margin: 5px;
-    padding: 5px;
-    min-width: 150px;
-    min-height: 150px;
-    background-color: lightgray;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    
+    border: 1px solid rgba(0,0,0,0.3);
+    min-width: 120px;
+    min-height: 120px;
+    border-radius: 20px 20px 20px 20px;
+
 }
 
 
