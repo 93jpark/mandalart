@@ -35,23 +35,23 @@ const Article = () => {
     const switchModalStatus = () => {
         setIsModalOpen(!isModalOpen);
     }
-
     
     return (
         <>  
             { isModalOpen ? <Modal switchModalStatus={switchModalStatus} focusPos={focusPos}></Modal> : null }
-        <div className={styles.container}>
-            <div className={styles.mandalart}>
+            
+            <div className={styles.container}>
+                <div className={styles.mandalart}>
 
-                {/* core area */}
-                {posArr.map((position, idx) => {
-                    let majorPos = idx === 4 ? "Main" : "sub" + position;
-                    return (
-                        <BoxContainer key={"area"+position+idx} className={styles.BoxContainer} clickedContainer={clickedContainer}  boxId={position} dataset={dataset[majorPos]} />
-                    )
-                })}
+                    {/* core area */}
+                    {posArr.map((position, idx) => {
+                        let majorPos = idx === 4 ? "Main" : "sub" + position;
+                        return (
+                            <BoxContainer key={"area"+position+idx} className={styles.BoxContainer} clickedContainer={clickedContainer}  boxId={position} dataset={dataset[majorPos]} />
+                        )
+                    })}
 
-            </div>
+                </div>
             </div>
         </>
     )

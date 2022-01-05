@@ -2,8 +2,6 @@ input {
     border: 0;
     border-bottom: 1 solid black;
     background: transparent;
-
-
 }
 
 input:focus {
