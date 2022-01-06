@@ -1,8 +1,8 @@
 import styles from './Article.module.css'
-//import ArticleTop from './ArticleTop';
 import BoxContainer from './BoxContainer';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
+//import Modal from '../../container/ModalContainer'
 import data from '../../data/dataTemplate.json'
 
 const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
@@ -13,25 +13,15 @@ const Article = () => {
 
     const [dataset, setData] = useState(data);
 
-
-    const [NW, setNW] = useState(data.NW);
-    const [N, setN] = useState(data.N);
-    const [NE, setNE] = useState(data.NE);
-    const [Main, setMain] = useState(data.Main);
-    const [E, setE] = useState(data.E);
-    const [SW, setSW] = useState(data.SW);
-    const [S, setS] = useState(data.S);
-    const [SE, setSE] = useState(data.SE);
-    
-
-    
+    // save which area is clicked,
+    // and open the Modal window
     const clickedContainer = (area) => {
-        alert(`It is ${area} area`);
         setFocusPos(area);
         console.log(focusPos);
         switchModalStatus();
     }
 
+    // control Modal open/close status
     const switchModalStatus = () => {
         setIsModalOpen(!isModalOpen);
     }

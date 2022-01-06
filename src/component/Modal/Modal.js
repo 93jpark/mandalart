@@ -1,5 +1,5 @@
 import styles from './Modal.module.css';
-import { FaRegWindowClose } from 'react-icons/fa';
+import { IoCloseOutline } from 'react-icons/io5';
 import { useState } from 'react';
 import Box from '../Main/Box';
 import InputModal from './InputModal';
@@ -20,18 +20,14 @@ const Modal = ({switchModalStatus, focusPos, children}) => {
         setIsInputModalOpen(!isInputModalOpen);
     }
 
-    console.log(focusPos);
-
     return (
         <>
-            
-
             <div className={styles.wrapper}>
 
                 <div className={styles.container}>
                     <div className={styles.statusBar}>
                         <span className={styles.statusTitle}>{focusPos}</span>
-                        <FaRegWindowClose className={styles.closeBtn} onClick={closeWindow}/>
+                        <IoCloseOutline className={styles.closeBtn} onClick={closeWindow}/>
                     </div>
 
                     { isInputModalOpen ? <InputModal switchInputModalStatus={switchInputModalStatus} ></InputModal> : null }

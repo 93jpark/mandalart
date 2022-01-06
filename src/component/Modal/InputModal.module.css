@@ -1,3 +1,14 @@
+input {
+    border: 0;
+    border-bottom: 1 solid black;
+    background: transparent;
+    text-align: center;
+}
+
+input:focus {
+    outline: none;
+    text-align: center;
+}
 
 /* wrapper for Modal background */
 .wrapper {
@@ -19,6 +30,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-align: center;
 }
 
 .container {

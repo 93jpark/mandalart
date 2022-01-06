@@ -1,11 +1,18 @@
 import styles from './InputModal.module.css';
-import { FaRegWindowClose } from 'react-icons/fa';
+import { IoCloseCircleSharp } from 'react-icons/io5';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 const InputModal = ({ switchInputModalStatus }) => {
+    const coreSubj = "core subject";
+    const minorSubj = "minor subject";
+
 
     const closeWindow = () => {
 
         switchInputModalStatus();
+    }
+
+    const applyNewGoal = () => {
+
     }
 
     return (
@@ -13,18 +20,15 @@ const InputModal = ({ switchInputModalStatus }) => {
             <div className={styles.wrapper}>
                 <div className={styles.container}>
                     <div className={styles.statusBar}>
-                        <AiOutlineCloseCircle className={styles.closeBtn} onClick={closeWindow} />
+                        <IoCloseCircleSharp className={styles.closeBtn} onClick={closeWindow} />
                     </div>
                     <p>Core subject</p>
                     <p>Minor subject</p>
                     <div className={styles.inputArea}>
                         <p>
-                            Hello
+                            <input type="text" placeholder='new goal goes here..'></input>
                         </p>
-                        <p>
-                            World
-                        </p>
-                        <button>yo</button>
+                        <button onClick={applyNewGoal}>apply</button>
                     </div>
                     
                 </div>
