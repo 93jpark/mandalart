@@ -5,13 +5,39 @@ import Modal from '../Modal/Modal';
 //import Modal from '../../container/ModalContainer'
 import data from '../../data/dataTemplate.json'
 
-const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
+import { useSelector, useDispatch } from 'react-redux'
+import { decrement, increment, incrementByAmount, setNewGoal } from '../../mandalart/mandalartSlice'
+
+//const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
 
 const Article = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [focusPos, setFocusPos] = useState(null);
+    const [dataset, setDataset] = useState(useSelector((state) => state.mandalart));
+    
+    
 
-    const [dataset, setData] = useState(data);
+    const dispatch = useDispatch();
+    const count = useSelector((state) => state.mandalart.value);
+    
+    const posArr = useSelector((state) => state.mandalart.posArr);
+    console.log(posArr);
+
+
+    dispatch( setNewGoal({
+        majorPos: 'NW',
+        minorPos: 0,
+        newGoal: 'test'
+    }))
+
+
+    const getFillingRate = (area) => {
+        const _dataset = dataset[area];
+        let count = 0;
+        _dataset.forEach(e => e !=='' ? count = count + 1 : null)
+        return count;
+    }
+
 
     // save which area is clicked,
     // and open the Modal window
@@ -26,6 +52,8 @@ const Article = () => {
         setIsModalOpen(!isModalOpen);
     }
     
+
+
     return (
         <>  
             { isModalOpen ? <Modal switchModalStatus={switchModalStatus} focusPos={focusPos}></Modal> : null }
@@ -33,11 +61,17 @@ const Article = () => {
             <div className={styles.container}>
                 <div className={styles.mandalart}>
 
-                    {/* core area */}
                     {posArr.map((position, idx) => {
+                        // console.log(`${position} - ${getFillingRate(position)}`);
+                        let fillingRate = getFillingRate(position);
                         let majorPos = idx === 4 ? "Main" : "sub" + position;
                         return (
-                            <BoxContainer key={"area"+position+idx} className={styles.BoxContainer} clickedContainer={clickedContainer}  boxId={position} dataset={dataset[majorPos]} />
+                            <BoxContainer key={"area"+position+idx} 
+                                className={styles.BoxContainer} 
+                                clickedContainer={clickedContainer}  
+                                boxId={position} 
+                                content={fillingRate} 
+                                level={fillingRate} />
                         )
                     })}
 
