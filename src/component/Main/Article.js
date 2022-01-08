@@ -12,16 +12,15 @@ import { decrement, increment, incrementByAmount, setNewGoal } from '../../manda
 
 const Article = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
-    const [focusPos, setFocusPos] = useState(null);
+    const [majorSub, setMajorSub] = useState(null);
     const [dataset, setDataset] = useState(useSelector((state) => state.mandalart));
     
-    
-
     const dispatch = useDispatch();
     const count = useSelector((state) => state.mandalart.value);
     
     const posArr = useSelector((state) => state.mandalart.posArr);
-    console.log(posArr);
+    
+    console.log(dataset);
 
 
     dispatch( setNewGoal({
@@ -30,6 +29,7 @@ const Article = () => {
         newGoal: 'test'
     }))
 
+        
 
     const getFillingRate = (area) => {
         const _dataset = dataset[area];
@@ -41,9 +41,9 @@ const Article = () => {
 
     // save which area is clicked,
     // and open the Modal window
-    const clickedContainer = (area) => {
-        setFocusPos(area);
-        console.log(focusPos);
+    const clickedContainer = (pos) => {
+        alert(pos);
+        setMajorSub(pos);
         switchModalStatus();
     }
 
@@ -56,22 +56,28 @@ const Article = () => {
 
     return (
         <>  
-            { isModalOpen ? <Modal switchModalStatus={switchModalStatus} focusPos={focusPos}></Modal> : null }
+            { isModalOpen ? <Modal switchModalStatus={switchModalStatus} majorSub={majorSub}></Modal> : null }
             
             <div className={styles.container}>
                 <div className={styles.mandalart}>
 
                     {posArr.map((position, idx) => {
-                        // console.log(`${position} - ${getFillingRate(position)}`);
                         let fillingRate = getFillingRate(position);
-                        let majorPos = idx === 4 ? "Main" : "sub" + position;
+                        
+                        let majorSubject = dataset["Main"][idx];
+
+                        if(getFillingRate("Main") === 0) {
+                            idx === 4 ? majorSubject='Click to start!' : majorSubject = '';    
+                        } 
+                        
                         return (
-                            <BoxContainer key={"area"+position+idx} 
-                                className={styles.BoxContainer} 
-                                clickedContainer={clickedContainer}  
-                                boxId={position} 
-                                content={fillingRate} 
-                                level={fillingRate} />
+                            <BoxContainer key={"area"+position+idx}
+                                className={styles.BoxContainer}
+                                clickedContainer={(position)=>{clickedContainer(position)}}
+                                boxId={position}
+                                content={majorSubject}
+                                level={fillingRate}
+                            />
                         )
                     })}
 

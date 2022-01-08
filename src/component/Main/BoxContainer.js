@@ -7,7 +7,7 @@ const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
 
 const BoxContainer = ( { boxId, clickedContainer, content, level } ) => {
 
-    const _colorScheme = {
+    const colorScheme = {
         NW: [237, 170, 132],
         N: [239, 124, 59],
         NE: [242, 237, 208],
@@ -27,30 +27,23 @@ const BoxContainer = ( { boxId, clickedContainer, content, level } ) => {
 
     }
 
-
     const stylingBGC = (boxId, level) => {
         let opacity = 0.3 + (level*0.15);
         if(level === 0) opacity = 0;
         if(boxId === 'Main') opacity = 1;
         return ({
-            backgroundColor: `rgba(${_colorScheme[boxId][0]}, ${_colorScheme[boxId][1]}, ${_colorScheme[boxId][2]}, ${opacity})`
+            backgroundColor: `rgba(${colorScheme[boxId][0]}, ${colorScheme[boxId][1]}, ${colorScheme[boxId][2]}, ${opacity})`
         })
     }
 
-
-
     return (
-        <div onClick={getBoxId} className={styles.container} style={stylingBGC(boxId, level)}>
+        <div onClick={getBoxId} style={stylingBGC(boxId, level)} className={styles.container}>
             {/* {posArr.map((pos, i) => {
                 return (
                     <Box key={pos+i} subject={boxId} content={dataset[pos]}   />
-                )
-            })} */}
-
+                )})} */}
                 {content}
-
-        </div>
-        
+        </div>        
     )
 }
 

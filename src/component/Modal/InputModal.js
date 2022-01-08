@@ -2,14 +2,19 @@ import styles from './InputModal.module.css';
 import { IoCloseCircleSharp } from 'react-icons/io5';
 import { AiOutlineCloseCircle } from 'react-icons/ai';
 import { useState, useRef } from 'react';
+import { useSelector, useDispatch } from 'react-redux'
+import { setNewGoal } from '../../mandalart/mandalartSlice'
 
+const InputModal = ({ switchInputModalStatus, pos, majorSub }) => {
+    const dataset = useSelector((state) => state.mandalart[majorSub]);
+    const dispatch = useDispatch();
 
-const InputModal = ({ switchInputModalStatus }) => {
-
+    console.log(`${pos} + ${majorSub}`)
     const [userInput, setUserInput] = useState('');
-
-    const coreSubj = "core subject";
+    const majorSubject = dataset[4];
     const minorSubj = "minor subject";
+    //let dispContent = subject === '' ? 'empty' : subject;
+    
 
     const closeWindow = () => {
         switchInputModalStatus();
@@ -20,6 +25,11 @@ const InputModal = ({ switchInputModalStatus }) => {
             alert('please fill out 🙂')
         } else {
             alert(userInput);
+            dispatch( setNewGoal({
+                majorPos: majorSub,
+                minorPos: pos,
+                newGoal: userInput,
+            }))
             closeWindow();
         }
         
@@ -31,10 +41,15 @@ const InputModal = ({ switchInputModalStatus }) => {
                     <div className={styles.statusBar}>
                         <IoCloseCircleSharp className={styles.closeBtn} onClick={closeWindow} />
                     </div>
-                    <p className={styles.title}>{coreSubj}</p>
-                    <p className={styles.subtitle}>{minorSubj}</p>
+                    <p className={styles.title}>
+                        {'major: '+majorSubject}
+                    </p>
+                    <p className={styles.subtitle}>
+                        {'minor: '}
+                    </p>
                     <div className={styles.inputArea}>
-                        <p>
+                        <submit>
+                        
                             <input type="text" 
                                 autoFocus
                                 autoComplete='off'
@@ -46,8 +61,9 @@ const InputModal = ({ switchInputModalStatus }) => {
                                     }
                                 }
                                 placeholder='new goal goes here..' />
-                        </p>
-                        <button id='applyBtn' onClick={applyNewGoal}>apply</button>
+                            <button id='applyBtn' onClick={applyNewGoal}>apply</button>
+
+                        </submit>
                     </div>
                     
                 </div>

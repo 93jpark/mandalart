@@ -1,9 +1,7 @@
 import styles from './Box.module.css'
 
 
-const Box = ( { subject, content, setContent, switchInputModalStatus } ) => {
-
-
+const Box = ( { getClickedPos, content, posIdx, switchInputModalStatus } ) => {
 
     const getContent = () => {
         if(content === 'Main') {
@@ -14,13 +12,12 @@ const Box = ( { subject, content, setContent, switchInputModalStatus } ) => {
         
     }
 
-    const setNewContent = () => {
-        //alert("clicked")
-        switchInputModalStatus();
-    }
     
     return (
-        <div onClick={setNewContent} className={styles.Box}>
+        <div onClick={()=>{
+                switchInputModalStatus()
+                getClickedPos(posIdx)
+            }} className={styles.Box}>
             <span className={styles.Content}>{content}</span>
         </div>
     )
