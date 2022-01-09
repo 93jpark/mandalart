@@ -5,7 +5,7 @@
     flex: 1;
     background-color: lightgrey;
     width: 100%;
-    min-width: 700px;
+    min-width: 400px;
     min-height: 120px;
     height: 20vh;
     flex-direction: column;

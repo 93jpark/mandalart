@@ -25,7 +25,7 @@ const InputModal = ({ switchInputModalStatus, majorSub, pos }) => {
         if(userInput === '') {
             alert('please fill out 🙂')
         } else {
-            alert(userInput);
+            //alert(userInput);
             dispatch( setNewGoal({
                 majorPos: major,
                 minorPos: minor,
@@ -42,13 +42,11 @@ const InputModal = ({ switchInputModalStatus, majorSub, pos }) => {
                     <div className={styles.statusBar}>
                         <IoCloseCircleSharp className={styles.closeBtn} onClick={closeWindow} />
                     </div>
-                    <p className={styles.title}>
-                        {`major: `}
-                    </p>
-                    <p className={styles.subtitle}>
-                        {`minor: `}
-                    </p>
+                    
                     <div className={styles.inputArea}>
+                        <p className={styles.title}>
+                            {`major: ${dataset[major][4]}`}
+                        </p>
                         <submit>
                         
                             <input type="text" 

@@ -4,7 +4,7 @@ const Footer = () => {
     return (
         <>
             <div className={styles.container}>
-                <h3>FOOTER</h3>
+                <p>Project Mandalart, all developed by Joonwoo Park</p>
             </div>
         </>  
     )

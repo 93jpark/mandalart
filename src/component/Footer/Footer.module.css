@@ -1,11 +1,15 @@
 .container {
     display: flex;
-    
-    align-content: center;
+    align-items: center;
     justify-content: center;
+    flex-direction: column;
     background-color: skyblue;
     font-size: small;
     margin-top: 13vh;
     width: 100vw;
     height: 7vh;
+}
+
+p {
+    margin: 0;
 }

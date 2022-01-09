@@ -47,7 +47,7 @@ const Modal = ({switchModalStatus, children}) => {
                 <div className={styles.container}>
                     <div className={styles.statusBar}>
                         <span className={styles.statusTitle}>
-                            {main === '' ? 'empty' : dataset[dataset.SelectedMajorPos]}
+                            {main === '' ? 'empty' : dataset[dataset.SelectedMajorPos][4]}
                         </span>
                         <IoCloseOutline className={styles.closeBtn} onClick={closeWindow}/>
                     </div>
