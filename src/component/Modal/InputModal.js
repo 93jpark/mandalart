@@ -5,17 +5,18 @@ import { useState, useRef } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import { setNewGoal } from '../../mandalart/mandalartSlice'
 
-const InputModal = ({ switchInputModalStatus, pos, majorSub }) => {
-    const dataset = useSelector((state) => state.mandalart[majorSub]);
+const InputModal = ({ switchInputModalStatus, majorSub, pos }) => {
     const dispatch = useDispatch();
-
-    console.log(`${pos} + ${majorSub}`)
+    const dataset = useSelector((state) => state.mandalart);
     const [userInput, setUserInput] = useState('');
-    const majorSubject = dataset[4];
-    const minorSubj = "minor subject";
-    //let dispContent = subject === '' ? 'empty' : subject;
-    
 
+    const major = dataset.SelectedMajorPos;
+    const minor = dataset.SelectedMinorPos;
+
+    console.log(major)
+    console.log(minor)
+    
+    console.log(dataset);
     const closeWindow = () => {
         switchInputModalStatus();
     }
@@ -26,8 +27,8 @@ const InputModal = ({ switchInputModalStatus, pos, majorSub }) => {
         } else {
             alert(userInput);
             dispatch( setNewGoal({
-                majorPos: majorSub,
-                minorPos: pos,
+                majorPos: major,
+                minorPos: minor,
                 newGoal: userInput,
             }))
             closeWindow();
@@ -42,10 +43,10 @@ const InputModal = ({ switchInputModalStatus, pos, majorSub }) => {
                         <IoCloseCircleSharp className={styles.closeBtn} onClick={closeWindow} />
                     </div>
                     <p className={styles.title}>
-                        {'major: '+majorSubject}
+                        {`major: `}
                     </p>
                     <p className={styles.subtitle}>
-                        {'minor: '}
+                        {`minor: `}
                     </p>
                     <div className={styles.inputArea}>
                         <submit>

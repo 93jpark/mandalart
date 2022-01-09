@@ -3,19 +3,26 @@ import { IoCloseOutline } from 'react-icons/io5';
 import { useState } from 'react';
 import Box from '../Main/Box';
 import InputModal from './InputModal';
+
+import { setNewGoal, selectMajorPos, selectMinorPos } from '../../mandalart/mandalartSlice'
+
 import { useSelector, useDispatch } from 'react-redux'
-// below func is customized func 
-import { decrement, increment, incrementByAmount } from '../../mandalart/mandalartSlice'
 
 
-const Modal = ({switchModalStatus, majorSub, children}) => {
+const Modal = ({switchModalStatus, children}) => {
     const [isInputModalOpen, setIsInputModalOpen] = useState(false);
     const [clickedPos, setClickedPos] = useState('');
 
     const posArr = useSelector((state) => state.mandalart.posArr);
-    const dataset = useSelector((state) => state.mandalart[majorSub]);
-    let title = dataset[4] === '' ? 'click to fill' : dataset[4];
-    console.log('fuck you '+dataset);
+    const dataset = useSelector((state) => state.mandalart);
+    const dispatch = useDispatch();
+
+    const selectedMajorPos = dataset.SelectedMajorPos;
+    const main = dataset[selectedMajorPos][4];
+
+    
+    console.log('fuck you ');
+    console.log(dataset)
 
     const closeWindow = () => {
         switchModalStatus();
@@ -23,6 +30,11 @@ const Modal = ({switchModalStatus, majorSub, children}) => {
 
     const getClickedPos = (pos) => {
         setClickedPos(pos);
+        console.log(`pos : ${pos}`);
+        dispatch(selectMinorPos({
+            newSelectedMinorPos: pos
+        }));
+
     }
 
     const switchInputModalStatus = () => {
@@ -35,17 +47,18 @@ const Modal = ({switchModalStatus, majorSub, children}) => {
                 <div className={styles.container}>
                     <div className={styles.statusBar}>
                         <span className={styles.statusTitle}>
-                            {title}
+                            {main === '' ? 'empty' : dataset[dataset.SelectedMajorPos]}
                         </span>
                         <IoCloseOutline className={styles.closeBtn} onClick={closeWindow}/>
                     </div>
 
-                    { isInputModalOpen ? <InputModal switchInputModalStatus={switchInputModalStatus} pos={clickedPos} majorSub={majorSub} ></InputModal> : null }
+                    { isInputModalOpen ? <InputModal switchInputModalStatus={switchInputModalStatus} pos={clickedPos} ></InputModal> : null }
 
                     <div className={styles.content}>
                         <div className={styles.mandalart}>
                             {posArr.map((pos, i) => {
-                                let content = dataset[i] === '' ? 'empty' : dataset[i];
+                                console.log(dataset[selectedMajorPos][i])
+                                let content = dataset[selectedMajorPos][i] === '' ? 'empty' : dataset[selectedMajorPos][i];
                                 if(i === 4 && content === 'empty') {
                                     content='click to fill'
                                 }

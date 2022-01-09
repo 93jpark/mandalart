@@ -5,6 +5,8 @@ export const mandalartSlice = createSlice({
     initialState: {
         posArr: ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"],
         value: 0,
+        SelectedMajorPos: '',
+        SelectedMinorPos: '',
         NW: Array(9).fill(''),
         N: Array(9).fill(''),
         NE: Array(9).fill(''),
@@ -18,28 +20,22 @@ export const mandalartSlice = createSlice({
         
     },
     reducers: {
-        increment: (state) => {
-            state.value += 1
-        },
-        decrement: (state) => {
-            state.value -= 1
-        },
-        incrementByAmount: (state, action) => {
-            console.log('action is '+action.type);
-            // action.type = mandalart/incrementByAmount
-            // payload is object which is parameters 
-            state.value += action.payload.size
-        },
         setNewGoal: (state, action) => {
             const majorPos = action.payload.majorPos;
             const minorPos = action.payload.minorPos;
             const newGoal = action.payload.newGoal;
 
             state[majorPos][minorPos] = newGoal;
+        },
+        selectMajorPos: (state, action) => {
+            state.SelectedMajorPos = action.payload.newSelectedMajorPos;
+        },
+        selectMinorPos: (state, action) => {
+            state.SelectedMinorPos = action.payload.newSelectedMinorPos;
         }
     }
 })
 
 // Action creators are generated for each case reducer function
-export const { increment, decrement, incrementByAmount, setNewGoal } = mandalartSlice.actions
+export const { setNewGoal, selectMajorPos, selectMinorPos } = mandalartSlice.actions
 export default mandalartSlice.reducer

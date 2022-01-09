@@ -5,7 +5,9 @@ import { useSelector, useDispatch } from 'react-redux'
 const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
 
 
-const BoxContainer = ( { boxId, clickedContainer, content, level } ) => {
+const BoxContainer = ( { boxId, clickedContainer } ) => {
+    const dataset = useSelector((state) => state.mandalart);
+    const content = boxId==="Main" & boxId==='' ? 'click to start' : dataset[boxId][4]
 
     const colorScheme = {
         NW: [237, 170, 132],
@@ -19,12 +21,11 @@ const BoxContainer = ( { boxId, clickedContainer, content, level } ) => {
         Main: [255, 255, 255],
     }
 
-    const getBoxId = () => {
-        clickedContainer(boxId);
-    }
-
-    const setContent = () => {
-
+    const getFillingRate = (area) => {
+        const _dataset = dataset[area];
+        let count = 0;
+        _dataset.forEach(e => e !=='' ? count = count + 1 : null)
+        return count;
     }
 
     const stylingBGC = (boxId, level) => {
@@ -37,12 +38,8 @@ const BoxContainer = ( { boxId, clickedContainer, content, level } ) => {
     }
 
     return (
-        <div onClick={getBoxId} style={stylingBGC(boxId, level)} className={styles.container}>
-            {/* {posArr.map((pos, i) => {
-                return (
-                    <Box key={pos+i} subject={boxId} content={dataset[pos]}   />
-                )})} */}
-                {content}
+        <div onClick={()=>{clickedContainer(boxId)}} style={stylingBGC(boxId, getFillingRate(boxId))} className={styles.container}>
+            {content}
         </div>        
     )
 }
