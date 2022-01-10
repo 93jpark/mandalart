@@ -3,18 +3,18 @@ import styles from './Box.module.css'
 
 const Box = ( { getClickedPos, content, posIdx, switchInputModalStatus } ) => {
 
-    const getContent = () => {
-        if(content === 'Main') {
-            
+    const fillContent = () => {
+        if(content === 'empty') {
+            return null
         } else {
-            //onClickPop(index)
+            return null
         }
-        
     }
-
-    
+    console.log(`posIdx : ${posIdx}`)
     return (
+        
         <div onClick={()=>{
+            
                 switchInputModalStatus()
                 getClickedPos(posIdx)
             }} className={styles.Box}>

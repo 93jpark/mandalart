@@ -1,8 +1,9 @@
 .Box {
     display: flex;
+    border: solid 1px lightgray;
     width: 90%;
     height: 90%;
-    background-color: white;
+    background-color:seashell;
     margin: 2px;
     line-height: 50px;
     border-radius: 20px 20px 20px 20px;

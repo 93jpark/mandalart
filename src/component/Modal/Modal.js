@@ -58,11 +58,16 @@ const Modal = ({switchModalStatus, children}) => {
                         <div className={styles.mandalart}>
                             {posArr.map((pos, i) => {
                                 console.log(dataset[selectedMajorPos][i])
-                                let content = dataset[selectedMajorPos][i] === '' ? 'empty' : dataset[selectedMajorPos][i];
-                                if(i === 4 && content === 'empty') {
-                                    content='click to fill'
-                                }
+                                const flag = dataset[selectedMajorPos][i] === '' ? true : false;
 
+                                let content = flag ? '' : dataset[selectedMajorPos][i];
+                                
+                                if(i === 4 && flag) {
+                                    content=`click to set goal💪`
+                                }
+                                
+                                
+                                
                                 return (
                                     <Box key={pos+i} getClickedPos={getClickedPos} switchInputModalStatus={switchInputModalStatus} posIdx={i} content={content} />
                                 )

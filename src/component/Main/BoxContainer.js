@@ -6,8 +6,9 @@ const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
 
 
 const BoxContainer = ( { boxId, clickedContainer } ) => {
+    console.log(boxId);
     const dataset = useSelector((state) => state.mandalart);
-    const content = boxId==="Main" & boxId==='' ? 'click to start' : dataset[boxId][4]
+    const content = boxId==="Main" & dataset[boxId][4]==='' ? 'click to start' : dataset[boxId][4]
 
     const colorScheme = {
         NW: [237, 170, 132],
@@ -29,9 +30,9 @@ const BoxContainer = ( { boxId, clickedContainer } ) => {
     }
 
     const stylingBGC = (boxId, level) => {
-        let opacity = 0.3 + (level*0.15);
+        let opacity = 0.2 + (level*0.15);
         if(level === 0) opacity = 0;
-        if(boxId === 'Main') opacity = 1;
+        //if(boxId === 'Main') opacity = 1;
         return ({
             backgroundColor: `rgba(${colorScheme[boxId][0]}, ${colorScheme[boxId][1]}, ${colorScheme[boxId][2]}, ${opacity})`
         })

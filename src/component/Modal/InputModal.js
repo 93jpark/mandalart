@@ -45,7 +45,7 @@ const InputModal = ({ switchInputModalStatus, majorSub, pos }) => {
                     
                     <div className={styles.inputArea}>
                         <p className={styles.title}>
-                            {`major: ${dataset[major][4]}`}
+                            {dataset[major][4] === ''? 'main subject is empty now!' : `${dataset[major][4]}`}
                         </p>
                         <submit>
                         
