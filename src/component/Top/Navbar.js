@@ -9,17 +9,17 @@ const Navbar = () => {
             <div className={styles.navItems}>
                 <div className={styles.menuItem}>
                     <AiFillInfoCircle className={styles.menuIcon} />
-                    <span>How To Use?</span>
+                    <a href="#" onClick={(e)=>{e.preventDefault();}}>How To Use?</a>
                 </div>
                 
                 <div className={styles.menuItem}>
                     <GoMarkGithub className={styles.menuIcon} />
-                    <span>Github</span>
+                    <a href="https://github.com/93jpark/mandalart">Github</a>
                 </div>
                 
                 <div className={styles.menuItem}>
                     <CgWebsite className={styles.menuIcon} />
-                    <span>Blog</span>
+                    <a href="93jpark.tistory.com">Blog</a>
                 </div>
                 
             </div>

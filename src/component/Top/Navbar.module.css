@@ -7,7 +7,15 @@
     min-height: 40px;
     justify-content: center;
     align-items: center;
+}
 
+a {
+    text-decoration: none;
+    color:darkslategrey;
+}
+
+a:hover {
+    color: lightgray;
 }
 
 .menuIcon {
@@ -19,12 +27,4 @@
     padding: auto;
     margin: 10vw;
     font-size: 20px;
-}
-
-.menuItem:hover {
-
-}
-
-.menuItem:hover span {
-    color:  whitesmoke;
 }
