@@ -1,5 +1,8 @@
+<div align="center">
 # 만다라트 프로젝트
-![logo192](https://user-images.githubusercontent.com/10703437/148901757-f417af0d-ea1c-4297-ae1d-fb67be0ef37f.png)
+
+<img src="https://user-images.githubusercontent.com/10703437/148901757-f417af0d-ea1c-4297-ae1d-fb67be0ef37f.png">
+
 
 >  
 >  Mandalart(만다라트)는 Manda(깨달음) La(성취) Art(기술)의 합성어입니다.   
@@ -29,3 +32,4 @@
 2021년 12월 25일 ~ 2022년 1월 7일 (약 2주)
 - 개발 일지 0 (93jpark.tistory.com/97)
 - 개발 일지 1 (93jpark.tistory.com/105)
+</div>
