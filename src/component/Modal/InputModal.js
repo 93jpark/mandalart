@@ -34,7 +34,7 @@ const InputModal = ({ switchInputModalStatus, majorSub, pos }) => {
 
             if(major === 'Main') {
                 const pos = dataset.posArr[minor];
-                console.log(pos);
+                //console.log(pos);
                 dispatch( setNewGoal({
                     majorPos: pos, // minor's position
                     minorPos: 4, // minor's main goal
