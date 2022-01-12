@@ -6,7 +6,6 @@ const posArr = ["NW", "N", "NE", "W", "Main", "E", "SW", "S", "SE"];
 
 
 const BoxContainer = ( { boxId, clickedContainer } ) => {
-    console.log(boxId);
     const dataset = useSelector((state) => state.mandalart);
     const content = boxId==="Main" & dataset[boxId][4]==='' ? 'click to start' : dataset[boxId][4]
 

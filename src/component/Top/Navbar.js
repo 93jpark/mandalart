@@ -19,7 +19,7 @@ const Navbar = () => {
                 
                 <div className={styles.menuItem}>
                     <CgWebsite className={styles.menuIcon} />
-                    <a href="93jpark.tistory.com">Blog</a>
+                    <a href="https://93jpark.tistory.com">Blog</a>
                 </div>
                 
             </div>

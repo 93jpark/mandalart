@@ -17,7 +17,7 @@ const Article = () => {
     // save which area is clicked,
     // and open the Modal window
     const clickedContainer = (pos) => {
-        console.log(pos)
+
         dispatch(selectMajorPos({
             newSelectedMajorPos: pos
         }));

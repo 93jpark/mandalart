@@ -10,7 +10,7 @@ const Box = ( { getClickedPos, content, posIdx, switchInputModalStatus } ) => {
             return null
         }
     }
-    console.log(`posIdx : ${posIdx}`)
+
     return (
         
         <div onClick={()=>{

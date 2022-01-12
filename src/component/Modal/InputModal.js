@@ -13,10 +13,10 @@ const InputModal = ({ switchInputModalStatus, majorSub, pos }) => {
     const major = dataset.SelectedMajorPos;
     const minor = dataset.SelectedMinorPos;
 
-    console.log(major)
-    console.log(minor)
-    
-    console.log(dataset);
+    //console.log(`major: ${major}`)
+    //console.log(`minor: ${minor}`)
+    //console.log(dataset);
+
     const closeWindow = () => {
         switchInputModalStatus();
     }
@@ -31,10 +31,34 @@ const InputModal = ({ switchInputModalStatus, majorSub, pos }) => {
                 minorPos: minor,
                 newGoal: userInput,
             }))
+
+            if(major === 'Main') {
+                const pos = dataset.posArr[minor];
+                console.log(pos);
+                dispatch( setNewGoal({
+                    majorPos: pos, // minor's position
+                    minorPos: 4, // minor's main goal
+                    newGoal: userInput,
+                }))
+            }
+            
+            if(major !== 'Main' && minor === 4) {
+                const pos = dataset.posArr.indexOf(major);
+                dispatch( setNewGoal({
+                     majorPos: 'Main', // minor's position
+                     minorPos: pos, // minor's main goal
+                     newGoal: userInput,
+                 }))
+            }
+
+
             closeWindow();
         }
         
     }
+
+
+
     return (
         <>
             <div className={styles.wrapper}>

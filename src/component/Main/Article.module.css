@@ -1,5 +1,6 @@
 .container {
-    padding-top: 5%;
+    margin-top: 10%;
+
     justify-content: center;
     align-items: center;
     flex-direction: column;

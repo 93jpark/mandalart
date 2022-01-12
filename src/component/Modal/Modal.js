@@ -21,16 +21,13 @@ const Modal = ({switchModalStatus, children}) => {
     const main = dataset[selectedMajorPos][4];
 
     
-    console.log('fuck you ');
-    console.log(dataset)
-
     const closeWindow = () => {
         switchModalStatus();
     }
 
     const getClickedPos = (pos) => {
         setClickedPos(pos);
-        console.log(`pos : ${pos}`);
+        //console.log(`pos : ${pos}`);
         dispatch(selectMinorPos({
             newSelectedMinorPos: pos
         }));
@@ -57,7 +54,7 @@ const Modal = ({switchModalStatus, children}) => {
                     <div className={styles.content}>
                         <div className={styles.mandalart}>
                             {posArr.map((pos, i) => {
-                                console.log(dataset[selectedMajorPos][i])
+                                //console.log(dataset[selectedMajorPos][i])
                                 const flag = dataset[selectedMajorPos][i] === '' ? true : false;
 
                                 let content = flag ? '' : dataset[selectedMajorPos][i];
@@ -65,8 +62,6 @@ const Modal = ({switchModalStatus, children}) => {
                                 if(i === 4 && flag) {
                                     content=`click to set goal💪`
                                 }
-                                
-                                
                                 
                                 return (
                                     
