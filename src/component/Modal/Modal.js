@@ -69,6 +69,7 @@ const Modal = ({switchModalStatus, children}) => {
                                 
                                 
                                 return (
+                                    
                                     <Box key={pos+i} getClickedPos={getClickedPos} switchInputModalStatus={switchInputModalStatus} posIdx={i} content={content} />
                                 )
                             })}
