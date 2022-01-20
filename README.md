@@ -29,7 +29,7 @@
 ## 사용법
 
 
-<img src="https://user-images.githubusercontent.com/10703437/150311738-53c8b2eb-22dd-413e-9c70-2d162d087a94.png" width="300" height="300" >
+<img src="https://user-images.githubusercontent.com/10703437/150311738-53c8b2eb-22dd-413e-9c70-2d162d087a94.png" width="500" height="500" >
 
 <img src="https://user-images.githubusercontent.com/10703437/150311546-470d0b7d-4ab7-457d-90c0-25872343aa93.png">
 
