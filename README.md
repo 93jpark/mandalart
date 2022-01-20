@@ -32,3 +32,6 @@
 2021년 12월 25일 ~ 2022년 1월 7일 (약 2주)
 - <a href="https://93jpark.tistory.com/97">개발 일지 0</a>
 - <a href="https://93jpark.tistory.com/105">개발 일지 1</a>
+- <a href="https://93jpark.tistory.com/106">개발 일지 2</a>
+
+
