@@ -15,6 +15,13 @@
 
 <br/><br/>
 
+## 배포 사이트
+링크: https://mandalart-7c930.web.app
+
+
+Firebase Hosting을 통해 배포하였습니다.
+<br/><br/>
+
 
 ## 개발동기
 
