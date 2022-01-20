@@ -34,11 +34,25 @@
 만다라트 계획표는 1개의 메인 목표와, 8개의 서브목표로 이루어집니다. 중간의 타일을 클릭하여 모달창을 띄웁니다.
 
 
-<img src="https://user-images.githubusercontent.com/10703437/150311546-470d0b7d-4ab7-457d-90c0-25872343aa93.png" width="500" height="500">
+### 2. 메인목표와 8개의 서브목표 채우기 
+<img src="https://user-images.githubusercontent.com/10703437/150311948-4d754824-3f48-4488-9da0-51518c3e24c1.gif">
+모달창에서 각 타일을 선택하여 목표들을 채웁니다.
+
+<img src="https://user-images.githubusercontent.com/10703437/150312918-b97872f1-fb40-4358-bc3c-a09ef6a8ce67.png" width="500" height="500">
+
+각 목표가 채워짐에 따라 메인 홈의 타일들의 색상이 채워집니.
+
+### 3. 각 서브목표를 달성하기 위한 계획들 세우기
+
 
 <img src="https://user-images.githubusercontent.com/10703437/150311859-828cb7f8-8b5e-4a47-889b-73964c2ed642.png" width="500" height="500">
 
-<img src="https://user-images.githubusercontent.com/10703437/150311948-4d754824-3f48-4488-9da0-51518c3e24c1.gif">
+
+
+
+
+
+<img src="https://user-images.githubusercontent.com/10703437/150311546-470d0b7d-4ab7-457d-90c0-25872343aa93.png" width="500" height="500">
 
 
 ### 개발 기간
