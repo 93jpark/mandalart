@@ -29,7 +29,7 @@
 <br/><br/>
 ## 리액트 컴포넌트 트리
 
-<img src="https://user-images.githubusercontent.com/10703437/150314119-3fcd71c4-adcf-4205-80f9-2713c7887263.png">
+<img src="https://user-images.githubusercontent.com/10703437/150315109-4da208fc-9b18-4215-a2d2-a85aa79b332e.png">
 
 리액트 컴포넌트 트리는 위와 같습니다. 
 - Top, Main, Footer의 영역으로 나누어지며, 핵심 부분은 Main입니다.
