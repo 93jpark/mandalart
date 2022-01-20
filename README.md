@@ -31,7 +31,11 @@
 
 <img src="https://user-images.githubusercontent.com/10703437/150314119-3fcd71c4-adcf-4205-80f9-2713c7887263.png">
 
-
+리액트 컴포넌트 트리는 위와 같습니다. 
+- Top, Main, Footer의 영역으로 나누어지며, 핵심 부분은 Main입니다.
+- 확장성을 고려하여 차후에 기능이 추가된다면 이용될 수 있는 Side부분을 Main내부에 구현 해두었습니다.
+- 계획표가 동작하는 부분은 Article 컴포넌트이며, 음영으로 표시된 BoxContainer, Box는 Redux의 상태에 따라 변화됩니다.
+- Modal, InputModal은 직접 제작한 모달창으로, 사용자와의 상호작용에 따라 열림/닫힘이 이루어집니다. 
 
 
 ## 사용법
