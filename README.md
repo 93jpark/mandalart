@@ -26,6 +26,16 @@
 
 2021년을 보내면서 내가 배운 기술로 내 스스로의 불편함을 해결해보자는 취지로 시작하게 되었습니다.
 
+## 사용법
+
+
+<img src="https://user-images.githubusercontent.com/10703437/150311738-53c8b2eb-22dd-413e-9c70-2d162d087a94.png">
+
+<img src="https://user-images.githubusercontent.com/10703437/150311546-470d0b7d-4ab7-457d-90c0-25872343aa93.png">
+
+<img src="https://user-images.githubusercontent.com/10703437/150311859-828cb7f8-8b5e-4a47-889b-73964c2ed642.png">
+
+<img src="https://user-images.githubusercontent.com/10703437/150311948-4d754824-3f48-4488-9da0-51518c3e24c1.gif">
 
 
 ### 개발 기간
