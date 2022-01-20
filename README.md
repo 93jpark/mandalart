@@ -28,12 +28,15 @@
 
 ## 사용법
 
-
+### 1. 초기화면
 <img src="https://user-images.githubusercontent.com/10703437/150311738-53c8b2eb-22dd-413e-9c70-2d162d087a94.png" width="500" height="500" >
 
-<img src="https://user-images.githubusercontent.com/10703437/150311546-470d0b7d-4ab7-457d-90c0-25872343aa93.png">
+만다라트 계획표는 1개의 메인 목표와, 8개의 서브목표로 이루어집니다. 중간의 타일을 클릭하여 모달창을 띄웁니다.
 
-<img src="https://user-images.githubusercontent.com/10703437/150311859-828cb7f8-8b5e-4a47-889b-73964c2ed642.png">
+
+<img src="https://user-images.githubusercontent.com/10703437/150311546-470d0b7d-4ab7-457d-90c0-25872343aa93.png" width="500" height="500">
+
+<img src="https://user-images.githubusercontent.com/10703437/150311859-828cb7f8-8b5e-4a47-889b-73964c2ed642.png" width="500" height="500">
 
 <img src="https://user-images.githubusercontent.com/10703437/150311948-4d754824-3f48-4488-9da0-51518c3e24c1.gif">
 
